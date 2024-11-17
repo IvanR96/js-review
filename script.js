@@ -143,6 +143,30 @@ function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
-//Destructuring
+//DESTRUCTURING
 
-const books = getBooks();
+const book = getBook(1);
+book;
+
+const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
+  book;
+
+console.log(author, title);
+
+// DESTRUCTURING WITH ARRAYS
+
+//const primaryGenre = genres[0];
+//const secondaryGenre = genres[1];
+
+const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
+
+console.log(primaryGenre, secondaryGenre, otherGenres);
+
+// SPREAD OPERATOR
+const newGenres = [...genres, "epic fantasy"];
+newGenres;
+
+//OVERRIDE VALUES IN ARRAYS WITH SPREAD OPERATOR
+const updatedBook = { ...book, moviePublicationDate: "2001-12-19" };
+
+updatedBook;
