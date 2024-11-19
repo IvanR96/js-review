@@ -145,7 +145,7 @@ function getBook(id) {
 
 //DESTRUCTURING
 
-const book = getBook(1);
+const book = getBook(2);
 book;
 
 const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
@@ -167,6 +167,25 @@ const newGenres = [...genres, "epic fantasy"];
 newGenres;
 
 //OVERRIDE VALUES IN ARRAYS WITH SPREAD OPERATOR
-const updatedBook = { ...book, moviePublicationDate: "2001-12-19" };
+const updatedBook = {
+  ...book,
+  moviePublicationDate: "2001-12-19",
+  rottenRating: 4.53,
+}; // new property added
 
 updatedBook;
+
+// TEMPLATE LITERALS
+
+const summary = `${title} is a book that is ${pages} pages long, not for the feint of heart.`;
+summary;
+
+// TERNARIES
+
+const pagesRange = pages > 1000 ? "over a thousand" : "less than 1000";
+
+pagesRange;
+
+console.log(`The book has ${pagesRange} pages`);
+
+// ARROW FUNCTIONS
