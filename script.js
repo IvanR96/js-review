@@ -189,3 +189,14 @@ pagesRange;
 console.log(`The book has ${pagesRange} pages`);
 
 // ARROW FUNCTIONS
+
+// arrow function example
+const getYear = (str) => str.split("-")[0];
+
+console.log(getYear(publicationDate));
+
+// SHORT CIRCUITING AND LOGICAL OPERATORS &&, ||, ??
+
+//short circuit example
+console.log(true && "this is true");
+console.log(false && "this wont work!!");
