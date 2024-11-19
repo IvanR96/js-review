@@ -145,7 +145,7 @@ function getBook(id) {
 
 //DESTRUCTURING
 
-const book = getBook(2);
+const book = getBook(1);
 book;
 
 const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
@@ -200,3 +200,7 @@ console.log(getYear(publicationDate));
 //short circuit example
 console.log(true && "this is true");
 console.log(false && "this wont work!!");
+console.log(hasMovieAdaptation && "This book has a movie!");
+
+// falsy: 0, '', null
+console.log("ivan" && "there is a string here");
