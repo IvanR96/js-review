@@ -189,7 +189,6 @@ pagesRange;
 console.log(`The book has ${pagesRange} pages`);
 
 // ARROW FUNCTIONS
-
 // arrow function example
 const getYear = (str) => str.split("-")[0];
 
@@ -204,3 +203,7 @@ console.log(hasMovieAdaptation && "This book has a movie!");
 
 // falsy: 0, '', null
 console.log("ivan" && "there is a string here");
+
+// OR OPERATOR SHORT CIRCUITS WHEN FIRST OPERATOR IS TRUE
+console.log(true || "Some string");
+console.log(false || "Some string");
