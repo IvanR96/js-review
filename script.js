@@ -207,3 +207,26 @@ console.log("ivan" && "there is a string here");
 // OR OPERATOR SHORT CIRCUITS WHEN FIRST OPERATOR IS TRUE
 console.log(true || "Some string");
 console.log(false || "Some string");
+
+console.log(book.translations.spanish);
+
+const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
+console.log(spanishTranslation);
+
+console.log(book.reviews.librarything.reviewsCount);
+
+const countWrong =
+  book.reviews.librarything.reviewsCount ||
+  "This book contains no reviews yet :(";
+
+console.log(countWrong);
+
+//CHAINING OPERATOR
+
+function getTotalReviewCount(book) {
+  const goodreads = book.reviews.goodreads?.reviewsCount;
+  const librarything = book.reviews.librarything?.reviewsCount ?? 0;
+  return goodreads + librarything;
+}
+
+console.log(getTotalReviewCount(book));
