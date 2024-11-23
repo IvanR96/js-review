@@ -144,7 +144,7 @@ function getBook(id) {
 }
 
 //DESTRUCTURING
-
+/*
 const book = getBook(1);
 book;
 
@@ -230,3 +230,7 @@ function getTotalReviewCount(book) {
 }
 
 console.log(getTotalReviewCount(book));
+*/
+
+// ARRAY MAP METHOD
+const books = getBooks();
