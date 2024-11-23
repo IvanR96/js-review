@@ -224,7 +224,7 @@ console.log(countWrong);
 //CHAINING OPERATOR
 
 function getTotalReviewCount(book) {
-  const goodreads = book.reviews.goodreads?.reviewsCount;
+  const goodreads = book.reviews?.goodreads?.reviewsCount;
   const librarything = book.reviews.librarything?.reviewsCount ?? 0;
   return goodreads + librarything;
 }
