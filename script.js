@@ -238,3 +238,7 @@ const books = getBooks();
 const x = [1, 2, 3, 4, 5].map((element) => element * 2);
 
 console.log(x);
+
+const titles = books.map((book) => book.title);
+
+console.log(titles);
