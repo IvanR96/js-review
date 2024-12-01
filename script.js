@@ -239,6 +239,6 @@ const x = [1, 2, 3, 4, 5].map((element) => element * 2);
 
 console.log(x);
 
-const titles = books.map((book) => book.title);
+const author = books.map((book) => book.author);
 
-console.log(titles);
+console.log(author);
