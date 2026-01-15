@@ -135,110 +135,18 @@ const data = [
   },
 ];
 
-function getBooks() {
+function getBooks(){
   return data;
 }
 
 function getBook(id) {
-  return data.find((d) => d.id === id);
+  return data.find((d) => d.id === id)
 }
+const book = getBook(2)
 
-//DESTRUCTURING
-/*
-const book = getBook(1);
-book;
+const {author, title} = book
 
-const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
-  book;
 
-console.log(author, title);
 
-// DESTRUCTURING WITH ARRAYS
 
-//const primaryGenre = genres[0];
-//const secondaryGenre = genres[1];
 
-const [primaryGenre, secondaryGenre, ...otherGenres] = genres;
-
-console.log(primaryGenre, secondaryGenre, otherGenres);
-
-// SPREAD OPERATOR
-const newGenres = [...genres, "epic fantasy"];
-newGenres;
-
-//OVERRIDE VALUES IN ARRAYS WITH SPREAD OPERATOR
-const updatedBook = {
-  ...book,
-  moviePublicationDate: "2001-12-19",
-  rottenRating: 4.53,
-}; // new property added
-
-updatedBook;
-
-// TEMPLATE LITERALS
-
-const summary = `${title} is a book that is ${pages} pages long, not for the feint of heart.`;
-summary;
-
-// TERNARIES
-
-const pagesRange = pages > 1000 ? "over a thousand" : "less than 1000";
-
-pagesRange;
-
-console.log(`The book has ${pagesRange} pages`);
-
-// ARROW FUNCTIONS
-// arrow function example
-const getYear = (str) => str.split("-")[0];
-
-console.log(getYear(publicationDate));
-
-// SHORT CIRCUITING AND LOGICAL OPERATORS &&, ||, ??
-
-//short circuit example
-console.log(true && "this is true");
-console.log(false && "this wont work!!");
-console.log(hasMovieAdaptation && "This book has a movie!");
-
-// falsy: 0, '', null
-console.log("ivan" && "there is a string here");
-
-// OR OPERATOR SHORT CIRCUITS WHEN FIRST OPERATOR IS TRUE
-console.log(true || "Some string");
-console.log(false || "Some string");
-
-console.log(book.translations.spanish);
-
-const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";
-console.log(spanishTranslation);
-
-console.log(book.reviews.librarything.reviewsCount);
-
-const countWrong =
-  book.reviews.librarything.reviewsCount ||
-  "This book contains no reviews yet :(";
-
-console.log(countWrong);
-
-//CHAINING OPERATOR
-
-function getTotalReviewCount(book) {
-  const goodreads = book.reviews?.goodreads?.reviewsCount;
-  const librarything = book.reviews.librarything?.reviewsCount ?? 0;
-  return goodreads + librarything;
-}
-
-console.log(getTotalReviewCount(book));
-*/
-
-// ARRAY MAP METHOD
-const books = getBooks();
-
-const x = [1, 2, 3, 4, 5].map((element) => element * 2);
-
-console.log(x);
-
-const author = books.map((book) => book.author);
-
-console.log(author);
