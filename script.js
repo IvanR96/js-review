@@ -144,7 +144,7 @@ function getBook(id) {
 }
 const book = getBook(2)
 
-const {author, title} = book
+const title = book
 
 
 
