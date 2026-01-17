@@ -144,7 +144,9 @@ function getBook(id) {
 }
 const book = getBook(2)
 
-const title = book
+const {title, author, genres} = book;
+
+console.log(genres[4])
 
 
 
