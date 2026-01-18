@@ -139,15 +139,20 @@ function getBooks(){
   return data;
 }
 
+
 function getBook(id) {
   return data.find((d) => d.id === id)
 }
 const book = getBook(2)
 
+/*
 const {title, author, genres} = book;
 
 console.log(genres[4])
+*/
 
+
+const [primaryGenre, secondaryGenre, ...otherGenres] = book.genres
 
 
 
