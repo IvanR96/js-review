@@ -155,5 +155,5 @@ console.log(genres[4])
 const [primaryGenre, secondaryGenre, ...otherGenres] = book.genres
 
 
-
+console.log(primaryGenre, otherGenres)
 
