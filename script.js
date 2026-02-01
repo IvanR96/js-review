@@ -140,20 +140,35 @@ function getBooks(){
 }
 
 
-function getBook(id) {
-  return data.find((d) => d.id === id)
-}
-const book = getBook(2)
+//function getBook(id) {
+ // return data.find((d) => d.id === id)
+//}
+
 
 /*
 const {title, author, genres} = book;
 
 console.log(genres[4])
-*/
+
 
 
 const [primaryGenre, secondaryGenre, ...otherGenres] = book.genres
 
+const newGenres = ["epic fantasy", ...otherGenres]
 
-console.log(primaryGenre, otherGenres)
+console.log(newGenres)
 
+*/
+
+const books = getBooks();
+
+const titles = books.map((book) => book.title)
+
+const essentialData = books.map((book) => ({
+
+    title:book.title,
+    author: book.author,
+  
+}))
+
+essentialData;
